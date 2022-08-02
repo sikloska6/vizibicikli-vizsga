@@ -149,4 +149,5 @@ $fh = fopen('f.txt', 'w');
         }
         print('<hr>');
     }
+    mysqli_close($conn);
 ?>

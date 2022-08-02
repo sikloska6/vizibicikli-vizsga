@@ -75,7 +75,6 @@ if (!$result) {
     while ($row = mysqli_fetch_array($result)) {
         print('5. kérdés | Összesen: '.$row['osszes']);
         print('<hr>');
-    
     }
 }
 
@@ -133,7 +132,6 @@ $fh = fopen('f.txt', 'w');
             }
         }                                                                 
         fwrite($fh, "\n");
-        
     }
     fclose($fh);
     echo 'kész!';
@@ -141,7 +139,6 @@ $fh = fopen('f.txt', 'w');
 
     //10.feladat statisztika egy jarmuvet hanyszor kolcsonoztek ki
     print('10. feladat'.'<br>');
-    //SELECT JAzon AS azonosito, COUNT(JAzon) AS mennyi FROM vizibicikli GROUP BY JAzon ORDER BY JAzon asc
     $query = 'SELECT JAzon AS azonosito, COUNT(JAzon) AS darab FROM vizibicikli GROUP BY JAzon ORDER BY JAzon asc';
     $result = mysqli_query($conn, $query);
     if (!$result) {
